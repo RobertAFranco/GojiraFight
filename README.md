@@ -172,7 +172,16 @@ JavaScript handles the dynamic behavior of the game, including user interactions
 - Game Over Logic: Code to display the game over screen and handle user actions like restarting or returning to the character selection screen.
 
 ## Stretch Goals
- - More characters with customization, move moves with special attacks, move animations, more enironments with extra danger and damage. 
+ - More characters with customization, move moves with special attacks, move animations, more enironments with extra danger and damage.
+
+## Timeline
+ - 7/13-14: HTML on main screen, arena, character selection, healthbars, Victory and Defeat announcements. .
+ - 7/15:  Work on CSS basic design layout of game, character blocking, healthbar blocking, arena setting, start buttons.
+ - 7/16: Javascript on character and loading the game beginning animations and further character select animations.
+ - 7/17: Javascript on character and function attacks/blocks/movement.
+ - 7/18: Define attacks and blocks further and incorparate with health bar. Creat end of game and restart to selection screen.
+ - 7/19: CSS character animation and word announcenments.
+ - 720-21: Fine tune styling, any design flaws, any missing animations, and cleaner styling design.
 
 ![gojiraa-2](https://github.com/user-attachments/assets/330e8890-3870-43b0-8d41-fbae21ade288)
 
