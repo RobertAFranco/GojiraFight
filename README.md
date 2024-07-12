@@ -183,6 +183,9 @@ JavaScript handles the dynamic behavior of the game, including user interactions
 - Health Management: Logic to update health bars and check game-over conditions.
 - Game Over Logic: Code to display the game over screen and handle user actions like restarting or returning to the character selection screen.
 
+## Stretch Goals
+ - More characters with customization, move moves with special attacks, move animations, more enironments with extra danger/damage 
+
 ![gojiraa-2](https://github.com/user-attachments/assets/330e8890-3870-43b0-8d41-fbae21ade288)
 
 
