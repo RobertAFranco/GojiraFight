@@ -2,6 +2,8 @@
 
 Street fighter style game with Godzilla and another monster.
 
+![gojiraa fight game](https://github.com/user-attachments/assets/9ecac31b-c9a9-4f55-8e81-d4846c684b2f)
+
 ## MVP User Stories with Pseudocode
 
 ### Character Selection:
@@ -26,11 +28,11 @@ As a player, I want to select a character from a list of available fighters (2 m
 
 As a player, I want to control my character's movement using the keyboard (e.g., arrow keys for movement and spacebar for jumping) so that I can navigate the game arena effectively.
 
->// Initialize player movement controls
->function initializeControls() {
- >   addEventListener('keydown', onKeyDown);
-  >  addEventListener('keyup', onKeyUp);
->}
+// Initialize player movement controls
+function initializeControls() {
+    addEventListener('keydown', onKeyDown);
+    addEventListener('keyup', onKeyUp);
+}
 
 function onKeyDown(event) {
     switch (event.key) {
@@ -180,6 +182,9 @@ JavaScript handles the dynamic behavior of the game, including user interactions
 - Attacking and Defending: Functions to manage attacks, special moves, and defenses.
 - Health Management: Logic to update health bars and check game-over conditions.
 - Game Over Logic: Code to display the game over screen and handle user actions like restarting or returning to the character selection screen.
+
+![gojiraa-2](https://github.com/user-attachments/assets/330e8890-3870-43b0-8d41-fbae21ade288)
+
 
 
 
