@@ -41,6 +41,11 @@ As a player, I want to receive feedback on the outcome of the match (e.g., a "Yo
       \\ Use display: grid; or display: flex; to layout the main game container.
       \\ Position and style the arena, character selection, health bars, and announcements to fit the design.
       \\ Make sure div.elements are stylized in CSS
+\\ Sprites/Characters
+   \\ Create character sprites using graphic design tools (jpg/gif/etc..)
+   \\ put sprites in appropriate formats (e.g., PNG) and organize them into directories.
+   \\ Create a sprite sheet if using multiple frames for animation.
+
 \\ Javascript Animation:
    \\ Write functions to handle:
        \\ Game initialization (e.g., start game, reset game).
@@ -55,8 +60,8 @@ As a player, I want to receive feedback on the outcome of the match (e.g., a "Yo
         \\ Apply these animations to character elements using CSS classes.
         \\ Trigger animations using JavaScript when certain actions occur (e.g., attack).
 \\ JavaScript: Additional Ainmations correspond with CSS if needed
-         \\ Write functions to handle different attack types.
          \\ Implement damage calculations.
+         \\ Write functions to handle different attack types.
          \\ Create functions for blocking actions.
          \\ Implement character movement controls (e.g., arrow keys).
          \\ Implement attack and block mechanics.
