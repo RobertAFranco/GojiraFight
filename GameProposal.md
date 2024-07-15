@@ -28,6 +28,36 @@ As a player, I want to see a health bar for both my character and the opponent s
 As a player, I want to receive feedback on the outcome of the match (e.g., a "You Win!" or "You Lose!" message) and be able to restart the game or return to the character selection screen so that I can either continue playing or start a new game.
 
 ## Pseudocode
+```\\
+\\ Create a <div> container for the game layout. html
+      \\ Inside this container:
+      \\ Add a <div> for the arena where fights will take place.
+       \\ Add a <div> for the character selection screen.
+       \\ Add a <div> for health bars.
+       \\ Add <div> elements for victory and defeat announcements.
+\\ CSS:
+      \\ Use display: grid; or display: flex; to layout the main game container.
+      \\ Position and style the arena, character selection, health bars, and announcements to fit the design.
+\\ Javascript Animation:
+       \\ Use animation libraries like GSAP or Anime.js to animate characters.
+       \\ Trigger animations on game start and during character selection.
+\\ CSS Animation:
+        \\ Define keyframes for basic animations.
+        \\ Apply animations to character elements and transitions.
+        \\ Apply animations for movement/attacks/blocks/damage.(after defined in javascript)
+\\ JavaScript: Additional Ainmations correspond with CSS if needed
+         \\ Write functions to handle different attack types.
+         \\ Implement damage calculations.
+         \\ Create functions for blocking actions.
+         \\ Implement character movement controls (e.g., arrow keys).
+         \\ Implement attack and block mechanics.
+         \\ Update health bars based on actions.
+         \\ Determine when a game ends. (time with damage)
+         \\ Show victory or defeat messages.
+         \\ Add effects to winner/loser messages
+         \\ Restart game option
+``` 
+
 
 #### Inital HTML Setup** (LOTS OF divs)
 - Create the main screen layout for the game.
