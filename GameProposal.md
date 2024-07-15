@@ -60,6 +60,7 @@ As a player, I want to receive feedback on the outcome of the match (e.g., a "Yo
         \\ Apply these animations to character elements using CSS classes.
         \\ Trigger animations using JavaScript when certain actions occur (e.g., attack).
 \\ JavaScript: Additional Ainmations correspond with CSS if needed
+         \\ Implament variables and constants
          \\ Implement damage calculations.
          \\ Write functions to handle different attack types.
          \\ Create functions for blocking actions.
