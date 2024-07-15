@@ -29,10 +29,39 @@ As a player, I want to receive feedback on the outcome of the match (e.g., a "Yo
 
 ## Pseudocode
 
+#### Inital HTML Setup** (LOTS OF divs)
+- Create the main screen layout for the game.
+- Design the arena where the fights will take place.
+- Implement character selection interface.
+- Add health bars to track the players' health.
+- Implement victory and defeat announcement sections.
 
+#### CSS Basic Design** (Maybe CSS GRID)
+- Style the basic layout of the game using CSS.
+- Design the appearance of the characters.
+- Style the health bars.
+- Design the arena setting.
+- Add and style the start buttons.
 
+#### JavaScript Animations and Beginning CSS Animations
+- Write JavaScript to handle character animations when the game starts. (Look at annimation libraries) 
+- Implement animations for the character selection process.
 
-## HTML (Structure)
+#### JavaScript Functions
+- Develop JavaScript functions for character attacks.
+- Implement functions for blocking and movement.
+
+#### Game Mechanics (loops, input handling, character movement/collision...etc)
+- Define and fine-tune attacks and blocks.
+- Connect attack/block functions with the health bar mechanics.
+- Create functionality for end-of-game scenarios and options to restart or return to the selection screen.
+
+#### CSS Animations
+- Add CSS animations for character actions.
+- Style the word announcements for victory and defeat with more effects.
+- Decide whether to use standard moves like kicks and punches or add special moves like power beams.
+
+### HTML (Structure)
 HTML is used to define the structure and content of the game. It includes elements such as the game container, character selection menu, health bars, and buttons.
 
 - Game Container: The main area where the game is rendered.
@@ -40,7 +69,7 @@ HTML is used to define the structure and content of the game. It includes elemen
 - Health Bars: Elements to show player and opponent health.
 - Game Over Screen: A section to display messages like "You Win!" or "You Lose!" and provide buttons for restarting or returning to character selection.
 
-## CSS (Styling)
+### CSS (Styling)
 CSS is used to style the game elements, including the layout of the game area, health bars, and character sprites.
 
 - Game Layout: Styling for the game container, character positions, and arena.
