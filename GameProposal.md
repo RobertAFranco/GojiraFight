@@ -31,27 +31,38 @@ As a player, I want to receive feedback on the outcome of the match (e.g., a "Yo
 ```\\
 \\ Create a <div> container for the game layout. html
       \\ Inside this container:
-      \\ Add a <div> for the arena where fights will take place.
-       \\ Add a <div> for the character selection screen.
-       \\ Add a <div> for health bars.
-       \\ Add <div> elements for victory and defeat announcements.
+            \\ Add a <div> for the arena where fights will take place.
+            \\ Add a <div> for the character selection screen.
+            \\ Add a <div> for health bars.
+            \\ Add <div> elements for victory and defeat announcements.
+     \\ Initialize game variables:
+            \\ Define player health, scores, etc.
 \\ CSS:
       \\ Use display: grid; or display: flex; to layout the main game container.
       \\ Position and style the arena, character selection, health bars, and announcements to fit the design.
+      \\ Make sure div.elements are stylized in CSS
 \\ Javascript Animation:
+   \\ Write functions to handle:
+       \\ Game initialization (e.g., start game, reset game).
+       \\ Basic animations (e.g., fade-in for announcements).
        \\ Use animation libraries like GSAP or Anime.js to animate characters.
        \\ Trigger animations on game start and during character selection.
 \\ CSS Animation:
         \\ Define keyframes for basic animations.
         \\ Apply animations to character elements and transitions.
         \\ Apply animations for movement/attacks/blocks/damage.(after defined in javascript)
+        \\ Define keyframes for animations (e.g., jumping, attacking).
+        \\ Apply these animations to character elements using CSS classes.
+        \\ Trigger animations using JavaScript when certain actions occur (e.g., attack).
 \\ JavaScript: Additional Ainmations correspond with CSS if needed
          \\ Write functions to handle different attack types.
          \\ Implement damage calculations.
          \\ Create functions for blocking actions.
          \\ Implement character movement controls (e.g., arrow keys).
          \\ Implement attack and block mechanics.
+         \\ Connect these functions to user inputs (e.g., key presses).
          \\ Update health bars based on actions.
+         \\ Handle game state changes (e.g., game over conditions).
          \\ Determine when a game ends. (time with damage)
          \\ Show victory or defeat messages.
          \\ Add effects to winner/loser messages
