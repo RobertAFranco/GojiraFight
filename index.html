@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GojiraFight</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Gojira vs. Megalodon!</h1>
+        <h2>How to play:</h2>
+           <h3>DEFEAT Megalodon by taking it's health before it takes yours!</h3> 
+           <h4>(a=attack)(s=block)(spacebar=jump)(,=left)(.=right)</h4>
+        <button id="start-game-btn">PLAY!</button>
+    </div>
+
+    <!-- Game Arena -->
+    <div id="game-arena" class="hidden">
+        <div id="player1" class="player"></div>
+        <div id="player2" class="player"></div>
+        <div id="player1-health" class="health-bar"></div>
+        <div id="player2-health" class="health-bar"></div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over" class="hidden">
+        <h1>GAME OVER!</h1>
+        <div id="game-over-message"></div>
+        <p id="winner-message"></p>
+        <p id="loser-message"></p>
+        <button id="restart-btn">Restart</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

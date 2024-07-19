@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Define keyframes for attack animations */
+@keyframes attack-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Add animation to the player on attack */
+.attack-animation {
+    animation: attack-animation 0.2s ease-in-out;
+}
+
+/* Define a brief flash effect for health bar when attacked */
+@keyframes health-bar-flash {
+    0% { background-color: red; }
+    50% { background-color: darkred; }
+    100% { background-color: red; }
+}
+
+.flash-health-bar {
+    animation: health-bar-flash 0.2s ease-in-out;
+}
+
+/* Game Over Screen Styles */
+.game-over {
+    display: none; /* Hide initially, shown when game ends */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Winner and Loser Messages */
+#winner-message {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #28a745; /* Green for the winner */
+}
+
+#loser-message {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #dc3545; /* Red for the loser */
+}
+
+/* Start Screen Styles */
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Header and Paragraph in Start Screen */
+.start-screen h1 {
+    font-size: 2.5em;
+}
+
+.start-screen p {
+    font-size: 1.5em;
+}
+
+/* Start Game Button */
+.start-game-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #f0ad4e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Hover effect for Start Game Button */
+.start-game-btn:hover {
+    background: #ec971f;
+}
+
+/* Game Arena Styles */
+#game-arena {
+    position: relative; /* Position relative to contain absolutely positioned elements */
+    width: 1000px;
+    height: 600px;
+    background: url('Assets/arena.jpg') no-repeat center center;
+    background-size: cover; /* Cover the entire area of the arena */
+    margin: auto;
+    border: 20px solid black;
+}
+
+/* Player Styles */
+.player {
+    position: absolute;
+    width: 400px; /* Adjust size to fit the arena and sprites */
+    height: 500px; /* Adjust size to fit the arena and sprites */
+    background-size: contain; /* Ensure the sprite fits within the element */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    z-index: 1; /* Ensure players are above health bars */
+    /* Player transition for bottom property */
+    transition: bottom 0.1s ease-in-out; /* Adjust timing and easing as needed */
+}
+
+#player1 {
+    left: 0px; /* Adjust position to fit within arena */
+    bottom: -110px;
+    background-image: url('Assets/completed godzilla for game.gif');
+    background-size: contain;
+}
+
+#player2 {
+    right: 150px; /* Adjust position to fit within arena */
+    bottom: 20px;
+    background-image: url('Assets/megavill.png');
+    background-size: contain;
+}
+
+/* Health Bar Styles */
+.health-bar {
+    position: absolute;
+    height: 20px;
+    background-color: red;
+    border-radius: 5px;
+    z-index: 2; /* Ensure health bars are on top */
+    transition: width 0.5s; /* Smooth transition for width changes */
+    width: 300px; /* Initial width, adjust if needed */
+}
+
+/* Player 1 Health Bar */
+#player1-health {
+    top: 10px; /* Distance from the top of the arena */
+    left: 10px; /* Distance from the left edge */
+}
+
+/* Player 2 Health Bar */
+#player2-health {
+    top: 10px; /* Distance from the top of the arena */
+    right: 10px; /* Distance from the right edge */
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Button Styles */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Restart and Return to Start Buttons */
+.restart-btn {
+    background: #d9534f;
+    border: none;
+    color: white;
+}
+
+/* Hover effects for buttons */
+.restart-btn:hover {
+    background: #c9302c;
+}
