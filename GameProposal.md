@@ -8,7 +8,7 @@ Street fighter style game with Godzilla and other monsters.
 
 ### Character Selection:
 
-As a player, I want to select a character from a list of available fighters (2 minimum) so that I can play the game with my preferred hero or villain. 
+As a player, a game with my preferred hero vs. villain. 
 
 ### Basic Movement:
 
@@ -16,7 +16,7 @@ As a player, I want to control my character's movement using the keyboard (e.g.,
 
 ### Attacking and Defending:
 
-As a player, I want to execute basic attacks, defense, and maybe special attacks (e.g., 'A' for punch, 'S' for kick, 'B' for block) so that I can engage in combat with the opponent.
+As a player, I want to execute basic attacks, defense, and maybe special attacks (e.g., 'A' for punch, 'S' for block more complex would be stretch goals) so that I can engage in combat with the opponent.
 
 
 ### Health and Game Over:
@@ -25,7 +25,7 @@ As a player, I want to see a health bar for both my character and the opponent s
 
 ### Winning and Losing Feedback:
 
-As a player, I want to receive feedback on the outcome of the match (e.g., a "You Win!" or "You Lose!" message) and be able to restart the game or return to the character selection screen so that I can either continue playing or start a new game.
+As a player, I want to receive feedback on the outcome of the match (e.g., a "You Win!" or "You Lose!" message) and be able to restart the game.
 
 ## Pseudocode
 ```\\
@@ -134,7 +134,7 @@ JavaScript handles the dynamic behavior of the game, including user interactions
 - Game Over Logic: Code to display the game over screen and handle user actions like restarting or returning to the character selection screen.
 
 ## Stretch Goals
- - More characters with customization, move moves with special attacks, move animations, more enironments with extra danger and damage.
+ - More characters with customization, more moves with special attacks, move animations, more environments with extra danger and damage.
 
 ## Timeline
  - 7/13-14: HTML main screen, arena, character selection, healthbars, Victory and Defeat announcements. 
