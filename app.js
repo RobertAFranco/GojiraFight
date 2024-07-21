@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function block(playerId) {
-        console.log(`${playerId} is blocking!`);git 
+        console.log(`${playerId} is blocking!`);
         isBlocking = true; // Start blocking
         const player = document.querySelector(playerId);
         if (player) {
