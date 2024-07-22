@@ -113,11 +113,11 @@ body {
     z-index: 1000; 
 }
 
-.start-screen h1 {
+#start-screen h1 {
     font-size: 2.5em;
 }
 
-.start-screen p {
+#start-screen p {
     font-size: 1.5em;
 }
 
