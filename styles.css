@@ -81,7 +81,7 @@ body {
     justify-content: center;
     height: 100vh; 
     background: linear-gradient(135deg, #4e4d4d, #333232);
-    background: url("Assets/gojirastart.gif") no-repeat center;
+    background: url("gojirastart.gif") no-repeat center;
     color: rgb(242, 242, 245);
     text-align: center;
     z-index: 1000; 
