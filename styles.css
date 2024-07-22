@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* Define keyframes for attack animations */
@@ -10,11 +12,9 @@ body {
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.1);
     }
-
     100% {
         transform: scale(1);
     }
@@ -30,11 +30,9 @@ body {
     0% {
         background-color: red;
     }
-
     50% {
         background-color: darkred;
     }
-
     100% {
         background-color: red;
     }
@@ -46,52 +44,80 @@ body {
 
 /* Game Over Screen Styles */
 .game-over {
-    display: none;
-    /* Hide initially, shown when game ends */
-    position: fixed;
+    display: flex; /* Flexbox layout to center content */
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    position: fixed; /* Ensures it covers the entire viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: #5b5959; /* Grey background */
+    color: #000; /* Text color for contrast */
     text-align: center;
-    z-index: 1000;
-    /* Ensure it's on top of other content */
+    z-index: 1000; /* Ensures it's on top of other content */
+}
+
+/* Header and Paragraph in Game Over Screen */
+#game-over h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#game-over p {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 /* Winner and Loser Messages */
 #winner-message {
     font-size: 2rem;
     margin: 10px 0;
-    color: #28a745;
-    /* Green for the winner */
+    color: #28a745; /* Green for the winner */
 }
 
 #loser-message {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #dc3545;
-    /* Red for the loser */
+    color: #dc3545; /* Red for the loser */
+}
+
+/* Restart Button */
+#restart-btn {
+    display: inline-flex; /* Inline Flexbox to center button */
+    justify-content: center;
+    align-items: center;
+    background-color: #f57c00; /* Orange background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for Restart Button */
+#restart-btn:hover {
+    background-color: #e64a19; /* Darker orange */
+}
+
+#restart-btn:active {
+    transform: scale(0.98);
 }
 
 /* Start Screen Styles */
 .start-screen {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* Full viewport height */
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: white;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #514f4f; /* Grey background */
+    color: black; /* Text color for contrast */
     text-align: center;
-    z-index: 1000;
-    /* Ensure it's on top of other content */
+    z-index: 1000; /* Ensure it's on top of other content */
 }
 
 /* Header and Paragraph in Start Screen */
@@ -104,32 +130,31 @@ body {
 }
 
 /* Start Game Button */
-.start-game-btn {
-    display: flex;
+#start-game-btn {
+    display: inline-flex; /* Inline Flexbox to center button */
     justify-content: center;
+    align-items: center;
     padding: 10px 20px;
     font-size: 1.2em;
     cursor: pointer;
-    background: #f0ad4e;
+    background: #f57c00; /* Orange background */
     border: none;
     border-radius: 5px;
     color: white;
 }
 
 /* Hover effect for Start Game Button */
-.start-game-btn:hover {
-    background: #ec971f;
+#start-game-btn:hover {
+    background: #e64a19; /* Darker orange */
 }
 
 /* Game Arena Styles */
 #game-arena {
-    position: relative;
-    /* Position relative to contain absolutely positioned elements */
+    position: relative; /* Position relative to contain absolutely positioned elements */
     width: 1000px;
     height: 600px;
     background: url("Assets/arena.jpg") no-repeat center center;
-    background-size: cover;
-    /* Cover the entire area of the arena */
+    background-size: cover; /* Cover the entire area of the arena */
     margin: auto;
     border: 20px solid black;
 }
@@ -137,32 +162,24 @@ body {
 /* Player Styles */
 .player {
     position: absolute;
-    width: 400px;
-    /* Adjust size to fit the arena and sprites */
-    height: 500px;
-    /* Adjust size to fit the arena and sprites */
-    background-size: contain;
-    /* Ensure the sprite fits within the element */
-    background-repeat: no-repeat;
-    /* Prevent repeating the image */
-    z-index: 1;
-    /* Ensure players are above health bars */
+    width: 400px; /* Adjust size to fit the arena and sprites */
+    height: 500px; /* Adjust size to fit the arena and sprites */
+    background-size: contain; /* Ensure the sprite fits within the element */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    z-index: 1; /* Ensure players are above health bars */
     /* Player transition for bottom property */
-    transition: bottom 0.1s ease-in-out;
-    /* Adjust timing and easing as needed */
+    transition: bottom 0.1s ease-in-out; /* Adjust timing and easing as needed */
 }
 
 #player1 {
-    left: 0px;
-    /* Adjust position to fit within arena */
+    left: 0px; /* Adjust position to fit within arena */
     bottom: -110px;
     background-image: url("Assets/completed godzilla for game.gif");
     background-size: contain;
 }
 
 #player2 {
-    right: 150px;
-    /* Adjust position to fit within arena */
+    right: 150px; /* Adjust position to fit within arena */
     bottom: 20px;
     background-image: url("Assets/megavill.png");
     background-size: contain;
@@ -174,28 +191,21 @@ body {
     height: 20px;
     background-color: red;
     border-radius: 5px;
-    z-index: 2;
-    /* Ensure health bars are on top */
-    transition: width 0.5s;
-    /* Smooth transition for width changes */
-    width: 300px;
-    /* Initial width, adjust if needed */
+    z-index: 2; /* Ensure health bars are on top */
+    transition: width 0.5s; /* Smooth transition for width changes */
+    width: 300px; /* Initial width, adjust if needed */
 }
 
 /* Player 1 Health Bar */
 #player1-health {
-    top: 10px;
-    /* Distance from the top of the arena */
-    left: 10px;
-    /* Distance from the left edge */
+    top: 10px; /* Distance from the top of the arena */
+    left: 10px; /* Distance from the left edge */
 }
 
 /* Player 2 Health Bar */
 #player2-health {
-    top: 10px;
-    /* Distance from the top of the arena */
-    right: 10px;
-    /* Distance from the right edge */
+    top: 10px; /* Distance from the top of the arena */
+    right: 10px; /* Distance from the right edge */
 }
 
 /* Hidden Class */
@@ -211,43 +221,25 @@ button {
     cursor: pointer;
 }
 
-/* Restart and Return to Start Buttons */
-.restart-btn {
-    background: #d9534f;
-    border: none;
-    color: white;
-}
-
-/* Hover effects for buttons */
-.restart-btn:hover {
-    background: #c9302c;
-}
-
 /* Define the block animation */
 .block-animation {
-    animation: blockAnimation 0.3s forwards;
-    /* Adjust duration as needed */
+    animation: blockAnimation 0.3s forwards; /* Adjust duration as needed */
 }
 
 @keyframes blockAnimation {
     0% {
         /* Initial state of the player during block */
-        transform: scale(1);
-        /* Example: Normal size */
+        transform: scale(1); /* Example: Normal size */
         opacity: 1;
     }
-
     50% {
         /* Mid-state of the block animation */
-        transform: scale(1.1);
-        /* Example: Slightly enlarged */
+        transform: scale(1.1); /* Example: Slightly enlarged */
         opacity: 0.8;
     }
-
     100% {
         /* End state of the block animation */
-        transform: scale(1);
-        /* Return to normal size */
+        transform: scale(1); /* Return to normal size */
         opacity: 1;
     }
 }

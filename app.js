@@ -8,9 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startGame() {
         console.log("Starting game...");
-        document.querySelector("#start-screen").classList.add("hidden");
-        document.querySelector("#game-arena").classList.remove("hidden");
-        initializeGame();
+        const startScreen = document.querySelector("#start-screen");
+        const gameArena = document.querySelector("#game-arena");
+
+        if (startScreen && gameArena) {
+            startScreen.classList.add("hidden");
+            gameArena.classList.remove("hidden");
+            initializeGame();
+        } else {
+            console.error("Start screen or game arena not found.");
+        }
     }
 
     function initializeStartScreen() {
@@ -33,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Start AI attacks
         startAIAttack();
+
+        // Set up the restart button
+        setupRestartButton();
     }
 
     function updateHealthBars() {
@@ -128,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Move the player up to the peak position
         player.style.bottom = `${peakBottom}px`;
     }
+
     function jump(playerId) {
         const jumpDuration = 200; // Total duration of the jump in milliseconds
 
@@ -207,9 +218,10 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Game Over!");
 
             // Hide the game arena and show the game over screen
-            document.querySelector("#game-arena").classList.add("hidden");
+            const gameArena = document.querySelector("#game-arena");
             const gameOverScreen = document.querySelector("#game-over");
-            if (gameOverScreen) {
+            if (gameArena && gameOverScreen) {
+                gameArena.classList.add("hidden");
                 gameOverScreen.classList.remove("hidden");
 
                 // Set player names
@@ -237,6 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Stop AI attacks
                 clearInterval(attackInterval);
+            } else {
+                console.error("Game arena or game over screen not found.");
             }
         }
     }
@@ -247,29 +261,47 @@ document.addEventListener("DOMContentLoaded", () => {
             if (player1Health > 0 && player2Health > 0) {
                 if (!isBlocking) {
                     attack("#player2", "#player1");
-                } else {
-                    console.log("Player is blocking. AI attack missed!");
                 }
             }
-        }, 3000); // Adjust attack interval as needed
+        }, 2000); // AI attacks every 2 seconds
     }
 
-    // Add restart button functionality
-    document.querySelector("#restart-btn").addEventListener("click", () => {
-        // Reset player health
-        player1Health = 100;
-        player2Health = 100;
+    function setupRestartButton() {
+        const restartButton = document.querySelector("#restart-btn");
+        if (restartButton) {
+            console.log("Restart button found.");
+            restartButton.addEventListener("click", () => {
+                // Reset player health
+                player1Health = 100;
+                player2Health = 100;
 
-        isBlocking = false; // Track whether the player is blocking
+                isBlocking = false; // Track whether the player is blocking
 
-        // Hide game over screen and show start screen
-        document.querySelector("#game-over").classList.add("hidden");
-        document.querySelector("#start-screen").classList.remove("hidden");
+                // Hide game over screen and show start screen
+                const gameOverScreen = document.querySelector("#game-over");
+                const startScreen = document.querySelector("#start-screen");
+                const gameArena = document.querySelector("#game-arena");
+                if (gameOverScreen && startScreen && gameArena) {
+                    gameOverScreen.classList.add("hidden");
+                    startScreen.classList.remove("hidden");
+                    gameArena.classList.add("hidden"); // Hide game arena
 
-        // Reset player positions if necessary
-        const player1 = document.querySelector("#player1");
-        const player2 = document.querySelector("#player2");
-        if (player1) player1.style.left = "0px";
-        if (player2) player2.style.left = "calc(100% - 400px)"; // Adjust based on player width
-    });
+                    // Reset player positions if necessary
+                    const player1 = document.querySelector("#player1");
+                    const player2 = document.querySelector("#player2");
+                    if (player1) player1.style.left = "0px";
+                    if (player2) player2.style.left = "calc(100% - 400px)"; // Adjust based on player width
+
+                    // Clear AI attacks
+                    clearInterval(attackInterval);
+                } else {
+                    console.error("Game over screen, start screen, or game arena not found.");
+                }
+            });
+        } else {
+            console.error("Restart button not found");
+        }
+    }
 });
+
+
