@@ -2,48 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GojiraFight</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Silkscreen:wght@400;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Start Screen -->
-    <div id="start-screen" role="dialog" aria-labelledby="start-screen-title"
-        aria-describedby="start-screen-instructions">
-        <h1 id="start-screen-title">Gojira vs. Megalodon!</h1>
+    <div class="start-screen" id="start-screen">
+        <h1>Gojira vs. Megalodon!</h1>
         <h2>How to play:</h2>
-        <h3 id="start-screen-instructions">DEFEAT Megalodon by taking its health before it takes yours!</h3>
-        <h4>(a=attack)
-            
+        <h4>DEFEAT Megalodon by taking it's health before it takes yours!</h4>
+        <h5>(a=attack)
             (s=block)
-            
             (spacebar=jump)
-            
             (,=left)
-            
-            (.=right)</h4>
+            (.=right)</h5>
         <button id="start-game-btn">PLAY!</button>
     </div>
 
     <!-- Game Arena -->
-    <div id="game-arena" class="hidden" role="region" aria-labelledby="game-arena-title">
-        <div id="player1" class="player" aria-label="Player 1"></div>
-        <div id="player2" class="player" aria-label="Player 2"></div>
-        <div id="player1-health" class="health-bar" aria-label="Player 1 Health"></div>
-        <div id="player2-health" class="health-bar" aria-label="Player 2 Health"></div>
+    <div id="game-arena" class="hidden">
+        <div id="player1" class="player"></div>
+        <div id="player2" class="player"></div>
+        <div id="player1-health" class="health-bar"></div>
+        <div id="player2-health" class="health-bar"></div>
     </div>
 
     <!-- Game Over Screen -->
-    <div id="game-over" class="hidden" role="dialog" aria-labelledby="game-over-title"
-        aria-describedby="game-over-message">
-        <h1 id="game-over-title">GAME OVER!</h1>
+    <div id="game-over" class="hidden game-over">
+        <h1>GAME OVER!</h1>
         <div id="game-over-message"></div>
         <p id="winner-message"></p>
         <p id="loser-message"></p>

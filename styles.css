@@ -3,143 +3,119 @@ body {
     padding: 0;
     overflow: hidden;
     font-family: "Silkscreen", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* chat gpt*/
-@keyframes attack-animation {
+    font-weight: 500;
+    font-style: bold;
+  
+  }       
+  
+  /* all keyframes and animation where made by chat gpt */
+  @keyframes attack-animation {
     0% {
-        transform: scale(1);
+      transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+      transform: scale(1.1);
     }
     100% {
-        transform: scale(1);
+      transform: scale(1);
     }
-}
-
-.attack-animation {
+  }
+  
+  .attack-animation {
     animation: attack-animation 0.2s ease-in-out;
-}
-
-/* chat gpt*/
-@keyframes health-bar-flash {
+  }
+  
+  /*  */
+  @keyframes health-bar-flash {
     0% {
-        background-color: red;
+      background-color: red;
     }
     50% {
-        background-color: darkred;
+      background-color: darkred;
     }
     100% {
-        background-color: red;
+      background-color: red;
     }
-}
-
-.flash-health-bar {
+  }
+  
+  .flash-health-bar {
     animation: health-bar-flash 0.2s ease-in-out;
-}
-
-.game-over {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    position: fixed; 
+  }
+  
+  /* Game Over Screen Styles */
+  .game-over {
+    display: none; 
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #5b5959; 
-    color: #000; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 11, 11, 0.8);
+    color: white;
     text-align: center;
     z-index: 1000; 
-}
-
-#game-over h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-#game-over p {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-#winner-message {
+  }
+  
+  /* Winner and Loser Messages */
+  #winner-message {
     font-size: 2rem;
     margin: 10px 0;
     color: #28a745; 
-}
-
-#loser-message {
+  }
+  
+  #loser-message {
     font-size: 1.5rem;
     margin: 10px 0;
     color: #dc3545; 
-}
-
-#restart-btn {
-    display: inline-flex; 
-    justify-content: center;
-    align-items: center;
-    background-color: #f57c00; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-#restart-btn:hover {
-    background-color: #e64a19; 
-}
-
-#restart-btn:active {
-    transform: scale(0.98);
-}
-
-.start-screen {
+  }
+  
+  /* Start Screen Styles */
+  .start-screen {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     height: 100vh; 
-    background-color: #514f4f; 
-    color: black; 
+    background: linear-gradient(135deg, #4e4d4d, #333232);
+    background: url("Assets/gojirastart.gif") no-repeat center;
+    color: rgb(242, 242, 245);
     text-align: center;
     z-index: 1000; 
-}
-
-#start-screen h1 {
+  }
+  
+  /* Header and Paragraph in Start Screen */
+  .start-screen h1 {
     font-size: 2.5em;
-}
-
-#start-screen p {
+  }
+  
+  .start-screen p {
     font-size: 1.5em;
-}
-
-#start-game-btn {
-    display: inline-flex; 
+  }
+  
+  /* Start Game Button */
+  .start-game-btn {
+    display: flex;
     justify-content: center;
-    align-items: center;
     padding: 10px 20px;
     font-size: 1.2em;
     cursor: pointer;
-    background: #f57c00; 
+    background: rgb(239, 177, 32);
     border: none;
     border-radius: 5px;
-    color: white;
-}
-
-#start-game-btn:hover {
-    background: #e64a19; 
-}
-
-/* Game Arena Styles */
-#game-arena {
+    color: rgb(143, 97, 5);
+  }
+  
+  /* Hover effect for Start Game Button */
+  .start-game-btn:hover {
+    background: #ec971f;
+  }
+  
+  /* Game Arena Styles */
+  #game-arena {
     position: relative; 
     width: 1000px;
     height: 600px;
@@ -147,79 +123,98 @@ body {
     background-size: cover; 
     margin: auto;
     border: 20px solid black;
-}
-
-.player {
+  }
+  
+  /* Player Styles */
+  .player {
     position: absolute;
     width: 400px; 
     height: 500px; 
     background-size: contain; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     z-index: 1; 
-    /* Player transition for bottom property  chat gpt*/
     transition: bottom 0.1s ease-in-out; 
-}
-
-#player1 {
+  }
+  
+  #player1 {
     left: 0px; 
     bottom: -110px;
     background-image: url("Assets/completed godzilla for game.gif");
     background-size: contain;
-}
-
-#player2 {
+  }
+  
+  #player2 {
     right: 150px;
     bottom: 20px;
     background-image: url("Assets/megavill.png");
     background-size: contain;
-}
-
-.health-bar {
+  }
+  
+  /* Health Bar Styles */
+  .health-bar {
     position: absolute;
     height: 20px;
     background-color: red;
     border-radius: 5px;
     z-index: 2; 
-    transition: width 0.5s; /
-}
-
-#player1-health {
+    transition: width 0.5s; 
+    width: 300px; 
+  }
+  
+  /* Player 1 Health Bar */
+  #player1-health {
     top: 10px; 
     left: 10px; 
-}
-
-#player2-health {
+  }
+  
+  /* Player 2 Health Bar */
+  #player2-health {
     top: 10px; 
     right: 10px; 
-}
-
-.hidden {
+  }
+  
+  /* Hidden Class */
+  .hidden {
     display: none;
-}
-
-button {
+  }
+  
+  /* Button Styles */
+  button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-}
-
-.block-animation {
+  }
+  
+  /* Restart and Return to Start Buttons */
+  .restart-btn {
+    background: #d9534f;
+    border: none;
+    color: rgb(255, 172, 6);
+  }
+  
+  /* Hover effects for buttons */
+  .restart-btn:hover {
+    background: #c9302c;
+  }
+  
+  /* Define the block animation */
+  .block-animation {
     animation: blockAnimation 0.3s forwards; 
-}
-
-@keyframes blockAnimation {  
+  }
+  
+  @keyframes blockAnimation {
     0% {
-        /* Chat GPT needed */
-        transform: scale(1); 
-        opacity: 1;
+      transform: scale(1); 
+      opacity: 1;
     }
     50% {
-        transform: scale(1.1); 
-        opacity: 0.8;
+      transform: scale(1.1); 
+      opacity: 0.8;
     }
     100% {
-        transform: scale(1); 
-        opacity: 1;
+      transform: scale(1); 
+      opacity: 1;
     }
-}
+  }
+  
